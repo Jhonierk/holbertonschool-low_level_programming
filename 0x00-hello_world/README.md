@@ -1,0 +1,1 @@
+# firts day working in C
