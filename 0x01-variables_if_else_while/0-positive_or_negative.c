@@ -2,7 +2,12 @@
 #include <stdlib.h>
 #include <time.h>
 /* more headers goes there */
-
+/**
+ * main - main block
+ * Use the function puts
+ * You are not allowed to use printf
+ * Return: 0
+ */
 /* betty style doc for function main goes there */
 int main(void)
 {
