@@ -1,6 +1,8 @@
 #include <stdio.h>
 /**
  * main - main block
+ * Use the function puts
+ * You are not allowed to use printf
  * Return: 0
  */
 int main(void)
