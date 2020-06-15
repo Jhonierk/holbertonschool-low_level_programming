@@ -1,4 +1,4 @@
-#include <stdio.h>
+nclude <stdio.h>
 /* more headers goes there */
 /**
  * main - main block
@@ -10,10 +10,10 @@
 /* betty style doc for function main goes there */
 int main(void)
 {
-	char c;
+        char c;
 
-	for (c = 'a'; c <= 'z'; c++)
-		putchar(c);
-		putchar('\n');
-		return (0);
+        for (c = 'a'; c <= 'z'; c++)
+                putchar(c);
+                putchar('\n');
+                return (0);
 }
