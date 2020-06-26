@@ -6,22 +6,22 @@
  * Return: string `s` rotated
  */
 
-char *rot13(char *c)
+char *rot13(char *s)
 {
-	int i, j;
+	char a[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char rot[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	int j, i;
 
-	char *c1 = "abcdefghijklmABCDEFGHIJKLM";
-	char *c2 = "nopqrstuvwxyzNOPQRSTUVWXYZ";
-
-	for (i = 0; c[i] != '\0'; i++)
+	for (i = 0; *(s + i) != '\0'; i++)
 	{
-		for (j = 0; c1[j] != '\0'; j++)
+		for (j = 0; j <= 51; j++)
 		{
-			if (c[i] == c1[j])
-				c[i] = c2[j];
-			else if (c[i] == c2[j])
-				c[i] = c1[j];
+			if (*(s + i) == a[j])
+			{
+				*(s + i) = rot[j];
+				break;
+			}
 		}
 	}
-	return (c);
+	return (s);
 }
