@@ -6,7 +6,7 @@
  * Return: string `s` rotated
  */
 
-char *rot13(char *s)
+char *rot13(char *c)
 {
 	int i, j;
 
