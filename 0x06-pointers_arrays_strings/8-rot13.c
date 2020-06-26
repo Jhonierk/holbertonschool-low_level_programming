@@ -8,17 +8,20 @@
 
 char *rot13(char *s)
 {
-	int i;
-	char storeh[] = "NOPQRSTUVWXYZABCDEFGHIJKLM";
-	char storel[] = "nopqrstuvwxyzabcdefghijklm";
+	int i, j;
 
-	for (i = 0; s[i] != '\0'; i++)
+	char *c1 = "abcdefghijklmABCDEFGHIJKLM";
+	char *c2 = "nopqrstuvwxyzNOPQRSTUVWXYZ";
+
+	for (i = 0; c[i] != '\0'; i++)
 	{
-		if ((s[i] > 64 && s[i] < 91) || (s[i] > 96 && s[i] < 123))
+		for (j = 0; c1[j] != '\0'; j++)
 		{
-			s[i] = (s[i] - 65 > 25) ?
-				storel[s[i] - 97] : storeh[s[i] - 65];
+			if (c[i] == c1[j])
+				c[i] = c2[j];
+			else if (c[i] == c2[j])
+				c[i] = c1[j];
 		}
 	}
-	return (s);
+	return (c);
 }
